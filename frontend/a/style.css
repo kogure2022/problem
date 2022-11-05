@@ -1,0 +1,10 @@
+.main {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#apitext {
+  text-align:left;
+  margin-bottom: 20px;
+}

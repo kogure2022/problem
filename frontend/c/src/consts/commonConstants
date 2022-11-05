@@ -1,0 +1,4 @@
+export default {
+ LEFTPOTISION: 1,
+ RIGHTPOTISION: 2
+}

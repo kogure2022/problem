@@ -1,0 +1,13 @@
+>下記の様に定義したテーブルがあります。ジャンルごとのitems.priceの平均値とジャンル名を取得したいと思っています
+>どの様なクエリを発行するべきでしょうか？理由もつけて回答してください
+・クエリ（Mysql）
+select `genres`.`name`, `items`.`price` FROM `items` INNER JOIN `genres` ON `items`.`genre_id` = `genres`.`id` GROUP BY `genres`.`name`
+
+・理由
+ジャンルに対するitemsテーブルの平均値とジャンル名を取得するのが要件なので
+存在しないジャンルがselect結果に表示されないようにitemsテーブルとgenresテーブルのJOIN句をINNER JOINを使用しました。
+これによりitemsテーブルのgenre_idとgenresテーブルのidが一致するレコードのみで平均値とジャンルが表示されることになります。
+
+>idカラム以外はインデックスを貼っていません。もし貼っておいた方が良いインデックスがあれば教えてください。こちらも理由をつけて回答してください
+itemsテーブルのgenre_idに対してgenresのidに外部キー、genre_idにINDEXを設定する
+これによりテーブル間のデータの整合性が保たれ、JOINで使用する項目なのでINDEXの効果が見込まれるかと考えています。

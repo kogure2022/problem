@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>frontendB</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
+</head>
+
+<body>
+  <div class="main" id="app">
+    <div class="textbox">
+      <input v-model="textBoxValue" type="text">
+      <button v-on:click="addText">追加</button>
+    </div>
+    <ul>
+      <li v-for="(textList,index) in list">
+        <div class="box">
+          <span class="square_btn" v-on:click="deleteText(index)"></span>
+          <p>{{ textList.text }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>

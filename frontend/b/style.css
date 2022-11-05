@@ -1,0 +1,72 @@
+.main {
+  width: 300px;
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+input {
+  border: 1px solid navy;
+  width: 236px;
+  height: 30px;
+}
+
+button {
+  width: 50px;
+  height: 35px;
+  background: navy;
+  color: white
+}
+
+.box {
+  border: 1px solid navy;
+  height: 50px;
+  width: 300px;
+  box-sizing: border-box;
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.square_btn {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: navy;
+}
+
+.square_btn::before,
+.square_btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 25px;
+  background: white;
+}
+
+.square_btn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.square_btn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+p {
+  text-align: center;
+  padding-left: 20px;
+}
+
+.textbox {
+  padding-bottom: 25px;
+}
